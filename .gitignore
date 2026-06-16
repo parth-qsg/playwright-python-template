@@ -11,9 +11,9 @@ test-results/
 playwright-report/
 .ms-playwright/
 
-# Environment
-.env
-*.env.local
+# # Environment
+# .env
+# *.env.local
 
 # Editor
 .vscode/
