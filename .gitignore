@@ -1,0 +1,32 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Test results and reports (generated at runtime)
+results/allure-results/
+results/html-report/
+results/screenshots/
+test-results/
+playwright-report/
+.ms-playwright/
+
+# Environment
+.env
+*.env.local
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# pytest cache
+.pytest_cache/
+.cache/
+
+# Allure
+allure-results/

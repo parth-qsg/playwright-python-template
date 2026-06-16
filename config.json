@@ -1,0 +1,18 @@
+{
+  "AUT": {
+    "base_url": "https://your-app-url.com",
+    "credentials": {
+      "admin": { "username": "", "password": "" },
+      "member": { "username": "", "password": "" }
+    },
+    "ui_viewport": {
+      "default": "hd",
+      "hd": { "width": 1920, "height": 1080 }
+    }
+  },
+  "tests": {
+    "screenshot_location": "results/screenshots",
+    "headless_mode": true,
+    "notes": ""
+  }
+}

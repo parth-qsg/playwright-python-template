@@ -1,0 +1,25 @@
+[project]
+name = "playwright-python-template"
+version = "0.1.0"
+description = "Python + Pytest + Playwright automation framework (eSketch-poc pattern)"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = [
+    "--strict-markers",
+    "-v",
+    "--tb=short",
+]
+markers = [
+    "api: API tests (no browser)",
+    "ui: Browser UI tests",
+    "smoke: Smoke suite — critical paths, must pass before deployment",
+    "regression: Full regression suite",
+    "slow: Long-running tests (>60s)",
+    "flaky: Known intermittent; retried automatically",
+]
+
+[tool.black]
+line-length = 88
+target-version = ["py311"]
