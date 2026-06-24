@@ -1,9 +1,13 @@
-"""Import all page modules so PageFactory.register() calls are executed.
+"""Auto-discover and import all page modules so PageFactory.register() calls are executed."""
 
-The agent will add imports here as new page objects are created.
-"""
-
-# Example (added automatically by the agent):
-# from pages.login_page import LoginPage
+import importlib
+import pkgutil
 
 __all__: list[str] = []
+
+# Dynamically import every module in the pages/ package.
+# This triggers PageFactory.register() in each page module automatically.
+# No manual imports needed — just create a new page file in pages/ and it works.
+for _importer, _modname, _ispkg in pkgutil.iter_modules(__path__):
+    if not _modname.startswith("_"):
+        importlib.import_module(f"{__name__}.{_modname}")
